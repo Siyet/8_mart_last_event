@@ -4,26 +4,30 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Викторина</title>
+    <title>Внимание!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% progressive_web_app_meta %}
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.lime-orange.min.css" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css' %}" />
-    <script src="{% static 'js/main.js' %}"></script>
-    <link rel="shortcut icon" type="image/png" href="{% static 'img/brain.ico' %}"/>
+    <script src="{% static 'js/typed.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/fotos.js' %}"></script>
 </head>
 <body>
-<div class="card mdl-shadow--2dp">
-    <button id="home-btn" class="mdl-button mdl-js-button mdl-button--icon" onclick="location.href='/'">
-        <i class="material-icons">home</i>
-    </button>
-    <button id="cats-btn" class="mdl-button mdl-js-button mdl-button--icon" onclick=`location.href='{% url "categories" %}'`>
-        <i class="material-icons">list</i>
-    </button>
-    {% block page %}{% endblock %}
-</div>
+    <div><span id="par1"></span></div>
+    <div class="img-container">
+        <span id="img1"></span>
+        <div class="first vertical line"></div>
+        <div class="second vertical line"></div>
+        <div class="first horizontal line"></div>
+        <div class="second horizontal line"></div>
+    </div>
+    <div><span id="par2"></span></div>
+    <div id="inputs"></div>
+    <div class="img-container">
+        <span id="img2"></span>
+        <img src="{% static 'img/IMG_7368.JPG' %}"/>
+    </div>
+    <div><span id="par3"></span></div>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['172.22.119.167']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -41,18 +41,18 @@ INSTALLED_APPS = [
     'pwa'
 ]
 
-PWA_APP_NAME = 'Викторина'
-PWA_APP_DESCRIPTION = "Кто хочет стать Красучег Уашпе?"
-PWA_APP_THEME_COLOR = '#0A0302'
-PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_NAME = 'Внимание'
+PWA_APP_DESCRIPTION = "Внимание обнаружен вирус?"
+PWA_APP_THEME_COLOR = '#000000'
+PWA_APP_BACKGROUND_COLOR = '#000000'
 PWA_APP_DISPLAY = 'fullscreen'
 PWA_APP_START_URL = '/'
-PWA_APP_ICONS = [
-    {
-        'src': '/static/img/brain.png',
-        'sizes': '512x512'
-    }
-]
+# PWA_APP_ICONS = [
+#     {
+#         'src': '/static/img/brain.png',
+#         'sizes': '512x512'
+#     }
+# ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -134,6 +134,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

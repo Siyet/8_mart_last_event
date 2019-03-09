@@ -6,8 +6,5 @@ from django.conf.urls import url, include
 from app import views
 
 urlpatterns = [
-    path('', views.startPage, name="home"),
-    path('teams', views.teams, name="teams"),
-    path('categories', views.categories, name="categories"),
-    path('<int:cat_id>/question', views.question, name="question"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', views.startPage, name="home")
+]
